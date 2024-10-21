@@ -1,0 +1,36 @@
+<p>create-user2 works!</p>
+<form [formGroup]="use2">
+    <label for="">name</label>
+    <input type="text" formControlName="name"><br>
+
+    <label for="">age</label>
+    <input type="text" formControlName="age"><br>
+
+    <div formGroupName="add">
+        <label for="">city</label>
+        <input type="text" formControlName="city"><br>
+        <label for="">pin</label>
+        <input type="text" formControlName="pin"><br>
+    </div>
+
+    <label for="">Type</label><br>
+
+    <label for="">DaySchooler</label>
+    <input type="radio" name="type" value="day" formControlName="type" ><br>
+
+    <label for="">Recidentail</label>
+    <input type="radio" name="type" value="resi" formControlName="type"><br>
+
+    <div *ngIf="use2.get('type')?.value=='day'">
+        <label for="">Bus Fee</label>
+        <input type="text" formControlName="busFee">
+    </div><br>
+
+    <div *ngIf="use2.get('type')?.value=='resi'">
+        <label for="">Hostel Fee</label>
+        <input type="text" formControlName="hostelFee">
+    </div><br>
+
+    <button (click)="submit()">submit</button>
+
+</form>

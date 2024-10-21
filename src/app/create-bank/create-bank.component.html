@@ -1,0 +1,20 @@
+<p>create-bank works!</p>
+<form [formGroup]="bankForm">
+    <label for="">account name</label>
+    <input type="text" formControlName="account_name"><br>
+
+    <label for="">balnce</label>
+    <input type="text" formControlName="available_balance"><br>
+
+    <label for="">account number</label>
+    <input type="text" formControlName="account_number"><br>
+
+    <label for="">city</label>
+    <input type="text" formControlName="city"><br>
+
+    <label for="">image</label>
+    <input type="text" formControlName="profie_picture"><br>
+
+    <button (click)="sub()">submit</button>
+
+</form>

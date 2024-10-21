@@ -1,0 +1,32 @@
+.par{
+    height: 100vh;
+    width: 70vw;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.child1{
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+}
+.child2{
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    padding: 10px;  
+}
+button{
+    margin-top: 20px;
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 10px;
+}
+input{
+    padding: 10px;
+    margin: 10px;
+}

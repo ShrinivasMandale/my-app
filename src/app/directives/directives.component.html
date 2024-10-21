@@ -1,0 +1,45 @@
+<p>directives works!</p>
+<h1>Age is {{age}}</h1>
+<h1 *ngFor="let age of ages">{{age}}</h1>
+<br>
+<select name="" id="">
+    <option value="" *ngFor=" let state of states">{{state}}</option>
+</select>
+<ul>
+    <li *ngFor="let state of states">{{state}}</li>
+</ul>
+
+<table class="styled-table" border="2" [cellPadding]="2" [cellSpacing]="0">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let use of users">
+            <td>{{use.name}}</td>
+            <td>{{use.age}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="styled-table" border="1" [cellSpacing]="0" [cellPadding]="2">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>price</th>
+            <th>rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.name}}</td>
+            <!-- a and b is css class -->
+            <td [ngClass]="{'a':product.price>20000, 'b':product.price<=20000}">{{product.price}}</td>
+            <td [ngStyle]="{'color': product.rating>4?'green':'red'}">{{product.rating}}</td>
+        </tr>
+    </tbody>
+</table>
+<!-- if true then show if false then hide, gives that value in ts -->
+<h1 *ngIf="isValid">This is if text</h1>

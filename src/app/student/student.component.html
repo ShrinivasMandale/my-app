@@ -1,0 +1,38 @@
+<p>student works!</p>
+<input type="text" placeholder="search" [(ngModel)]="str1" (keyup)="search()">
+<hr>
+<label for="">column</label>
+<select [(ngModel)]="column">
+    <option value="name">NAME</option>
+    <option value="city">city</option>
+    <option value="school_name">school name</option>
+</select>
+<label for="">Order</label>
+<select [(ngModel)]="order">
+    <option value="asc">ACENDING</option>
+    <option value="desc">Decending</option>
+</select>
+<button (click)="sort()">Sort</button>
+<div class="par">
+    <div class="child" *ngFor="let a of studentArr">
+        <img class="schoollogo" src="{{a.school_logo}}" alt="" width="50px">
+        <p>school name: {{a.school_name}}</p>
+        <hr>
+        <div class="a">
+            <div>
+                <p>name: {{a.name}}</p>
+                <p>phone: {{a.phone}}</p>
+                <p>city: {{a.city}}</p>
+            </div>
+            <div>
+                <img class="stuimg" src="{{a.profile_picture}}" alt="" width="100px" height="100px">
+            </div>
+        </div>
+        <p>DOB: {{a.dob}}</p>
+        <p>Email: {{a.email}}</p>
+        <p>school city: {{a.school_city}}</p>
+        <p>school pin: {{a.school_pin}}</p>
+        <p>id: {{a.id}}</p>
+        <button (click)="del(a.id)">Delete</button>
+    </div>
+</div>

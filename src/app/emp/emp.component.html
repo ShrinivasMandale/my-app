@@ -1,0 +1,55 @@
+<p>emp works!</p>
+
+<label for="">name</label>
+<input type="text" [(ngModel)]="ename"><br>
+<label for="">Experience</label>
+<input type="number" [(ngModel)]="eex"><br>
+<label for="">package</label>
+<input type="number" [(ngModel)]="epak"><br>
+<label for="">role</label>
+<input type="text" [(ngModel)]="erol"><br>
+<button (click)="add()">Add</button><br>
+
+<button (click)="hike()">20%Hike</button>
+<button (click)="bonas()">Bonas</button>
+<button (click)="pacLH()">PackageLH</button>
+<button (click)="pacHL()">PackageHL</button>
+<button (click)="totalC()" >TotalCost</button>
+<button (click)="totE()" >Total Employee</button>
+<input type="text" [(ngModel)]="str1" (keyup)="search()" placeholder="search by name">
+
+
+
+<table border="1" [cellSpacing]="0" [cellPadding]="5">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>experience</th>
+            <th>package</th>
+            <th>role</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of employees let i=index">
+            <td>{{a.name}}</td>
+            <td>{{a.experience}}</td>
+            <td>{{a.package}}</td>
+            <td>{{a.role}}</td>
+            <td>
+                <button (click)="del(i)">Delete{{i}}</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br>
+
+<div class="par">
+    <div *ngFor="let a of employees let i=index" class="child">
+        <p>employee name: <b>{{a.name}}</b></p>
+       <p>Experience: <b>{{a.experience}}</b></p>
+        <p>package: <b>{{a.package}}</b></p>
+        <p>role: <b> {{a.role}}</b></p>
+        <button (click)="del(i)">Del{{i}}</button>
+    </div>
+</div>
+

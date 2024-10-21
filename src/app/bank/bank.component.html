@@ -1,0 +1,52 @@
+<p>bank works!</p>
+
+<input type="text" placeholder="search" [(ngModel)]="str" (keyup)="search()">
+<hr>
+<label for="">column</label>
+<select [(ngModel)]="column">
+    <option value="account_name">ACCOUNT NAME</option>
+    <option value="available_balance">BALANCE</option>
+    <option value="city">CITY</option>
+</select>
+<label for="">order</label>
+<select [(ngModel)]="order">
+    <option value="asc">ACENDING</option>
+    <option value="desc">DECENDING</option>
+</select>
+<button (click)="sort()">sort</button>
+<hr>
+<select [(ngModel)]="page" (change)="pagenation()">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+</select>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Account Name</th>
+            <th>Balnce</th>
+            <th>Account No</th>
+            <th>city</th>
+            <th>photo</th>
+            <th>id</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of bankArr">
+            <td>{{a.account_name}}</td>
+            <td>{{a.available_balance}}</td>
+            <td>{{a.account_number}}</td>
+            <td>{{a.city}}</td>
+            <td>
+                <img src="{{a.profie_picture}}" width="100px" alt="">
+            </td>
+            <td>{{a.id}}</td>
+            <td>
+                <button (click)="del(a.id)">delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

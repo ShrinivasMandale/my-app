@@ -1,0 +1,34 @@
+<p>higher-order works!</p>
+
+<button (click)="add20()">Delivary charg 20</button>
+<button (click)="discount()">50% discount</button>
+<button (click)="pricelh()">price low to high</button>
+<button (click)="pricehl()">price high to low</button>
+<button (click)="totalprice()">total cart price</button>
+<br><br>
+<p>Total cart Items: <mark>{{products.length}}</mark></p>
+<select [(ngModel)]="category" (change)="categoryChange()">
+    <option value="gadgets">GADGETS</option>
+    <option value="fashion">FASHION</option>
+    <option value="footware">FootWear</option>
+    <option value="accessories">ACCSERIES</option>
+</select>
+<input type="text" placeholder="search" [(ngModel)]="term" (keyup)="search()">
+<table border="1">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>categiry</th>
+            <th>price</th>
+            <th>rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.name}}</td>
+            <td>{{product.category}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.rating}}</td>
+        </tr>
+    </tbody>
+</table>

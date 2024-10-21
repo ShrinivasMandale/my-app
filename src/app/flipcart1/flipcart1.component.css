@@ -1,0 +1,14 @@
+.par{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.child{
+    background-color: antiquewhite;
+    height: 350px;
+    width: 300px;
+    text-align: center;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+}

@@ -1,0 +1,47 @@
+<h1>Flipcart</h1>
+<label for="">name:</label>
+<input type="text" [(ngModel)]="productName"><br>
+
+<label for="">Price</label>
+<input type="number" [(ngModel)]="price"><br>
+
+<label for="">Rating</label>
+<input type="number" [(ngModel)]="rating"><br>
+
+<label for="">Delevari date</label>
+<input type="date" [(ngModel)]="deliveryDate"><br>
+
+<label for="">Free Delivery: </label>
+
+<label for="">Yes</label>
+<input type="radio" name="fd" value="True" [(ngModel)]="freeDelivary">
+
+<label for="">No</label>
+<input type="radio" name="fd" value="false" [(ngModel)]="freeDelivary"><br><br>
+
+<button (click)="submit1()">submit</button>
+
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>price</th>
+            <th>rating</th>
+            <th>Delavari Date</th>
+            <th>Free Delavri</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of products; let i=index ">
+            <td>{{a.name}}</td>
+            <td>{{a.price}}</td>
+            <td>{{a.rating}}</td>
+            <td>{{a.delivaryDate}}</td>
+            <td>{{a.freeDelivary}}</td>
+            <td>
+                <button (click)="del(i)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

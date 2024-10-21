@@ -1,0 +1,46 @@
+<p>pra works!</p>
+<button (click)="add20()">add Delivary charg 20</button>
+<button (click)="discount()">50%Discount</button>
+<button (click)="pricelh()">price low to high</button>
+<button (click)="pricehl()">price high to low</button>
+<button (click)="total()">Total cart price</button>
+
+
+<select [(ngModel)]="categiri" (change)="catChang()">
+    <option value="gadgets">GADGETS</option>
+    <option value="fashion">FASHION</option>
+    <option value="footware">FOOTWARE</option>
+    <option value="accessories">ACCESSORIES</option>
+</select>
+
+<input type="text" placeholder="search" [(ngModel)]="searchVar" (keyup)="search1()">
+<br><br>
+<label for="">name</label>
+<input type="text" [(ngModel)]="pname"><br>
+<label for="">category</label>
+<input type="text" [(ngModel)]="pcate"><br>
+<label for="">price</label>
+<input type="number" [(ngModel)]="pprice"><br>
+<label for="">rating</label>
+<input type="number" [(ngModel)]="prating"><br>
+<button (click)="add()">Submit</button>
+
+<p>Total items in cart <mark>{{products.length}}</mark></p>
+<table border="1">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>category</th>
+            <th>price</th>
+            <th>rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.name}}</td>
+            <td>{{product.category}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.rating}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,25 @@
+button{
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 10px;
+}
+tr:hover{
+    background-color: gray;
+}
+tr:nth-child(even){
+background-color: green;
+color: white;
+}
+.par{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.child{
+    background-color: aquamarine;
+    height: 200px;
+    width: 200px;
+   border: 2px solid black;
+   text-align: center; 
+}

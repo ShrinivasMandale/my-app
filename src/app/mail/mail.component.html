@@ -1,0 +1,9 @@
+<p>mail works!</p>
+
+
+    <ol>
+        <li *ngFor="let a of emailArr" [ngClass]="{'true':a.completed,'false':!a.completed}">
+            <p>{{a.title}}</p>
+        </li>
+    </ol>
+

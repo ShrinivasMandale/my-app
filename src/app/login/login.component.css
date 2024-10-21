@@ -1,0 +1,35 @@
+.par{
+    width: 100vw;
+    height: 100vh;
+    background-color:rgb(62, 99, 168);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login{
+    margin-bottom: 80px;
+}
+form{
+    padding: 20px;
+    background-color: white;
+    height: 80%;
+    width: 30%;
+    text-align: center;
+    border-radius: 20px;
+}
+input{
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid black;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+button{
+    padding: 20px;
+    width: 50%;
+    background-color: rgb(236, 31, 236);
+    color: white;
+    font-size: 20px;
+    margin-bottom: 40px;
+}

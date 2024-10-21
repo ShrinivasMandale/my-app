@@ -1,0 +1,32 @@
+.par{
+    display: flex;
+    flex-wrap: wrap; 
+}
+.child{
+    background-color: antiquewhite;
+    height: 450px;
+    width: 400px;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px; 
+}
+.schoollogo{
+    margin-left: 120px;
+}
+.a{
+    display: flex;
+    justify-content: space-between;
+}
+.stuimg{
+    border-radius: 50%;
+}
+button{
+    color: white;
+    background-color: rgb(67, 67, 238);
+    padding: 10px;
+    border-radius: 10px;
+    border: 0px;
+}
+button:hover{
+    background-color: orange;
+}
